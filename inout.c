@@ -296,7 +296,7 @@ uint8recv(PG_FUNCTION_ARGS)
 {
 	StringInfo buf = (StringInfo) PG_GETARG_POINTER(0);
 
-	PG_RETURN_UINT64((uint64) pq_getmsgint64(buf, sizeof(uint64)));
+	PG_RETURN_UINT64((uint64) pq_getmsgint64(buf));
 }
 
 PG_FUNCTION_INFO_V1(uint8send);
